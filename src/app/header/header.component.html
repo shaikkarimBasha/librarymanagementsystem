@@ -1,0 +1,65 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-primary" style="background-color: coral;">
+    <a class="navbar-brand" routerLink="/">Library Management System</a>
+    <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="collapsibleNavId">
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item active" *ngIf="isAdminsLoggedIn">
+                        <a class="nav-link" routerLink="/">Home</a>
+                    </li>
+            <li class="nav-item active" *ngIf="isAdminsLoggedIn">
+                <a class="nav-link" routerLink="/create-user">Create User </a>
+            </li>
+            
+
+            <li class="nav-item active" *ngIf="isAdminsLoggedIn">
+                <a class="nav-link" routerLink="/delete-user">Delete User</a>
+            </li>
+
+            <li class="nav-item active" *ngIf="isLibrariansLoggedIn">
+                <a class="nav-link" routerLink="/add-book">Add Book</a>
+            </li>
+
+
+           
+
+            <li class="nav-item active" *ngIf="isLibrariansLoggedIn">
+                <a class="nav-link" routerLink="/delete-book">Delete Book</a>
+            </li>
+
+
+            <li class="nav-item active" *ngIf="isLibrariansLoggedIn">
+                <a class="nav-link" routerLink="/serach-book">Search Book</a>
+            </li>
+
+            
+            <li class="nav-item active" *ngIf="isStudentsLoggedIn">
+                <a class="nav-link" routerLink="/search-book">Search Book</a>
+            </li>
+
+            <li class="nav-item active" *ngIf="isStudentsLoggedIn">
+                <a class="nav-link" routerLink="/register-book">Register Book</a>
+            </li>
+
+           
+
+
+            <li class="nav-item" *ngIf="!isAdminsLoggedIn && !isLibrariansLoggedIn && !isStudentsLoggedIn">
+                <a class="nav-link" routerLink="/register">Register</a>
+            </li>
+
+            <li class="nav-item active" *ngIf="!isAdminsLoggedIn && !isLibrariansLoggedIn && !isStudentsLoggedIn">
+                <a class="nav-link" routerLink="/login">Login</a>
+            </li>
+
+            <li class="nav-item active" *ngIf="isAdminsLoggedIn || isLibrariansLoggedIn || isStudentsLoggedIn">
+                <button type="submit" class="btn btn-outline-light" (click)="logout()">Logout</button>
+            </li>
+
+            
+        </ul>
+    </div>
+</nav>
+
