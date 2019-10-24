@@ -12,6 +12,10 @@ import { DeleteUserComponent } from './delete-user/delete-user.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { SearchUserComponent } from './search-user/search-user.component';
+import { AddBookComponent } from './add-book/add-book.component';
+import { DeleteBookComponent } from './delete-book/delete-book.component';
+import { UpdateBookComponent } from './update-book/update-book.component';
+import { SearchBookComponent } from './search-book/search-book.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +27,11 @@ import { SearchUserComponent } from './search-user/search-user.component';
    SearchUserComponent,
     LoginComponent,
     RegisterComponent,
-    SearchUserComponent
+    SearchUserComponent,
+    AddBookComponent,
+    DeleteBookComponent,
+    UpdateBookComponent,
+    SearchBookComponent
   ],
   imports: [
     BrowserModule,
